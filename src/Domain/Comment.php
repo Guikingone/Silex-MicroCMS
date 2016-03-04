@@ -26,6 +26,13 @@ class Comment
     private $content;
 
     /**
+   * Comment author.
+   *
+   * @var \MicroCMS\Domain\User
+   */
+  private $author;
+
+    /**
      * Associated article.
      *
      * @var \MicroCMS\Domain\Article
@@ -62,5 +69,9 @@ class Comment
 
     public function setArticle(Article $article) {
         $this->article = $article;
+    }
+
+    public function setAuthor(User $author) {
+        $this->author = $author;
     }
 }
